@@ -4,20 +4,20 @@
 = Introduction =
 
 This is a basic guide to installing and using the chatpad driver.  For now, this is an alpha release so the install and uninstall process are rough.  Do not try the driver right now unless you are comfortable testing alpha software.  :)
-
+<br/>
 
 = Disclaimer =
 
-This software is provided with no guarantees.  See the [License] wiki page for license information.
+This software is provided with no guarantees.  See the [License] wiki page for license information.<br/>
 
-  * This software is open-source, but I have not yet finished uploading everything to this project page due to lack of time and upcoming Christmas vacation.  If you are uncomfortable installing software without source, please wait until I upload the files.
-  * This software currently only works with WIRED 360 controllers.  It may only currently work with the "Made for Windows" variant but that should change soon to support normal XBox 360 console controllers as well.
-  * This software currently contains unsigned kernel drivers.  You must enable the use of unsigned drivers if you are using 64-bit Windows Vista or Windows 7.
-  * This software is used at your own risk if you play games protected by the VAC (Valve anti-cheat) system.  This software does not mess with anything in Steam folders, does not replace DLLs, does not hook calls to DLLs, and does not communicate with games at all except by providing keyboard and mouse virtual HID devices to the operating system.  It is my belief that this should be safe, and the VAC FAQ ([https://support.steampowered.com/kb_article.php?ref=7849-Radz-6869]) mentions that system drivers should not trigger a VAC ban.  I am using the software myself as a gesture of good faith, and I play VAC-protected games.  Nevertheless, Valve provides no way to verify whether particular software is safe, so do not use the software if you are worried about this.  As long as the control utility is not running, the virtual keyboard and mouse devices should not even generate events.
+  * This software is open-source, but I have not yet finished uploading everything to this project page due to lack of time and upcoming Christmas vacation.  If you are uncomfortable installing software without source, please wait until I upload the files.<br/>
+  * This software currently only works with WIRED 360 controllers.  It may only currently work with the "Made for Windows" variant but that should change soon to support normal XBox 360 console controllers as well.<br/>
+  * This software currently contains unsigned kernel drivers.  You must enable the use of unsigned drivers if you are using 64-bit Windows Vista or Windows 7.<br/>
+  * This software is used at your own risk if you play games protected by the VAC (Valve anti-cheat) system.  This software does not mess with anything in Steam folders, does not replace DLLs, does not hook calls to DLLs, and does not communicate with games at all except by providing keyboard and mouse virtual HID devices to the operating system.  It is my belief that this should be safe, and the VAC FAQ ([https://support.steampowered.com/kb_article.php?ref=7849-Radz-6869]) mentions that system drivers should not trigger a VAC ban.  I am using the software myself as a gesture of good faith, and I play VAC-protected games.  Nevertheless, Valve provides no way to verify whether particular software is safe, so do not use the software if you are worried about this.  As long as the control utility is not running, the virtual keyboard and mouse devices should not even generate events.<br/>
 
 = Install Process =
 
-* WARNING!!!  THIS IS ALPHA SOFTWARE!  IF YOU ARE UNCOMFORTABLE WITH MESSING WITH DEVICE MANAGER OR DRIVERS, WAIT FOR A LATER RELEASE! *
+* WARNING!!!  THIS IS ALPHA SOFTWARE!  IF YOU ARE UNCOMFORTABLE WITH MESSING WITH DEVICE MANAGER OR DRIVERS, WAIT FOR A LATER RELEASE! *<br/>
 
   * In the currently released binary, only Windows Vista 64-bit (and MAYBE Windows 7 64-bit) systems are supported.  In addition there may be an Intel/AMD issue.  I need to build a bunch more binaries tomorrow to support more OS variants.  This is not hard, but it takes a little bit of time.<br/>
   * If you are using Windows Vista 64-bit or Windows 7 64-bit versions, you will need to first restart your system and press F8 right after the BIOS information goes away to get a boot menu.  Choose the option shown here:<br/>[http://img390.imageshack.us/img390/4326/ddsecc9.png]  <br/>You will need to choose that option with each boot for 64-bit systems, until we potentially get a kernel signing certificate.<br/>
@@ -28,15 +28,17 @@ This software is provided with no guarantees.  See the [License] wiki page for l
   * Right click chatpad_installer.exe and choose "Run as administrator" if you are using Vista or Windows 7.  Otherwise just right click it and choose "Open".<br/>
   * A series of message boxes should appear describing the install process.  Some devices will get added in device manager, and you should see three red boxes asking you whether you want to install an unsigned driver.  You will need to allow this to happen to install the drivers in their current state.  *Note:  This step may take MINUTES.  Please give Windows time to install the drivers, parse INF files, and create restore points as appropriate.  Do not try to rerun the installer!  Check task manager if you are unsure if the installer is still running.*<br/>
   * If none of the message boxes mention an error, go to "Using the Drivers" below.  If an error occurs, go to Troubleshooting.  If it fails, do not try to immediately run the installation again since it probably won't work the second time either!<br/>
+<br/>
 
 = Using the Drivers =
 
   * Right click chatpad_control.exe and choose "Run as administrator" if your operating system supports it, or "Open" otherwise.<br/>
-  * A command prompt window should open and stay visible.  If it closes instantly, you can try opening an adminstrator command prompt yourself (right click Start, Programs, Accessories, Command Prompt, Run as administrator) and run chatpad_control.exe again to see what output you get.  Only do this if you are comfortable with the command line and want to help me with debug output, though!
-  * If everything goes well, the command prompt window will print some stuff and stay visible.  If you were watching your 360 controller, you might have noticed the light blinking.  Try pressing some chatpad keys!  They should type stuff.  :)  You can try using mouse control by pressing the "people" button to toggle double thumbstick mouse control.
-  * If you got this far and everything is working, by some stroke of magic, then you are welcome to modify chatpad_config.txt (make a backup if you want, first) and change the bindings to suit your own taste.  See the comments in chatpad_config.txt, and the strings in README.TXT, for information about how to set up key bindings.  Note that my documentation is in an early state, so please forgive TODO comments and debug output for now.
+  * A command prompt window should open and stay visible.  If it closes instantly, you can try opening an adminstrator command prompt yourself (right click Start, Programs, Accessories, Command Prompt, Run as administrator) and run chatpad_control.exe again to see what output you get.  Only do this if you are comfortable with the command line and want to help me with debug output, though!<br/>
+  * If everything goes well, the command prompt window will print some stuff and stay visible.  If you were watching your 360 controller, you might have noticed the light blinking.  Try pressing some chatpad keys!  They should type stuff.  :)  You can try using mouse control by pressing the "people" button to toggle double thumbstick mouse control.<br/>
+  * If you got this far and everything is working, by some stroke of magic, then you are welcome to modify chatpad_config.txt (make a backup if you want, first) and change the bindings to suit your own taste.  See the comments in chatpad_config.txt, and the strings in README.TXT, for information about how to set up key bindings.  Note that my documentation is in an early state, so please forgive TODO comments and debug output for now.<br/>
+<br/>
 
 = Troubleshooting =
 
-  * I haven't had problems with stability and I really hope you won't either.  However, if you do encounter a blue screen or crash, don't panic!  First, unplug the 360 controller.  Then, wait for the system to reboot (or reboot it manually if necessary).  Then, run chatpad_uninstaller.exe (right click, Run as Administrator if in Vista or Windows 7), wait for all message boxes to go away, and plug the controller back in.  Open device manager, and notice that the 360 controller should now be indicating an error.  Right click it, and use Update Driver Software to go back to the normal Microsoft controller.
-  * The uninstall process does not currently delete the virtual keyboard and mouse devices.  I need to add this code, but it's not in yet.  To manually remove the devices, right click the "HID Keyboard Device" or "HID-compliant mouse" in Device Manager and choose the Uninstall option.
+  * I haven't had problems with stability and I really hope you won't either.  However, if you do encounter a blue screen or crash, don't panic!  First, unplug the 360 controller.  Then, wait for the system to reboot (or reboot it manually if necessary).  Then, run chatpad_uninstaller.exe (right click, Run as Administrator if in Vista or Windows 7), wait for all message boxes to go away, and plug the controller back in.  Open device manager, and notice that the 360 controller should now be indicating an error.  Right click it, and use Update Driver Software to go back to the normal Microsoft controller.<br/>
+  * The uninstall process does not currently delete the virtual keyboard and mouse devices.  I need to add this code, but it's not in yet.  To manually remove the devices, right click the "HID Keyboard Device" or "HID-compliant mouse" in Device Manager and choose the Uninstall option.<br/>
