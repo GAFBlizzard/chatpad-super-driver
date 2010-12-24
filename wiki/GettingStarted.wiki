@@ -28,7 +28,7 @@ This software is provided with no guarantees.  See the [License] wiki page for l
   * Extract the install package zip file to a directory.<br/>
   * IMPORTANT NOTE:  Go read Troubleshooting below, in case the next step causes a blue screen or crash!  It really shouldn't, but be prepared!<br/>
   * Right click chatpad_installer.exe and choose "Run as administrator" if you are using Vista or Windows 7.  Otherwise just right click it and choose "Open".<br/>
-  * If it does not run at all, go check the Troubleshooting section for information about the Visual C++ 2010 redistributable.
+  * If it does not run at all, go check the Troubleshooting section for information about the Visual C++ 2010 redistributable.<br/>
   * A series of message boxes should appear describing the install process.  Some devices will get added in device manager, and you should see three red boxes asking you whether you want to install an unsigned driver.  You will need to allow this to happen to install the drivers in their current state.  *Note:  This step may take MINUTES.  Please give Windows time to install the drivers, parse INF files, and create restore points as appropriate.  Do not try to rerun the installer!  Check task manager if you are unsure if the installer is still running.*<br/>
   * If none of the message boxes mention an error, go to "Using the Drivers" below.  If an error occurs, go to Troubleshooting.  If it fails, do not try to immediately run the installation again since it probably won't work the second time either!<br/>
 <br/>
