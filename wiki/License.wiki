@@ -1,5 +1,11 @@
 #summary License information.
 
+-----
+ *IMPORTANT NOTE:*&nbsp;&nbsp;All !WdfCoInstaller01009.dll files are from the redistributable WinDDK code according to license.rtf and redist.txt in the WinDDK.  Microsoft does not sponsor this project and is not responsible for any problems with it. Please email me (gtschemer@gmail.com) if you have license or distribution concerns.
+ 
+ The rest of the files in this install package are governed by the following license.
+-----
+
 = License =
 
 The MIT License
