@@ -19,6 +19,21 @@ This software is provided with no guarantees.  See the [License] wiki page for l
 
 * WARNING!!!  THIS IS ALPHA SOFTWARE!  IF YOU ARE UNCOMFORTABLE WITH MESSING WITH DEVICE MANAGER OR DRIVERS, WAIT FOR A LATER RELEASE! *
 
-  * In the currently released binary, only Windows Vista 64-bit (and MAYBE Windows 7 64-bit) systems are supported.  In addition there may be an Intel/AMD issue.  I need to build a bunch more binaries tomorrow to support more OS variants.  This is not hard, but it takes a little bit of time.
-  * If you are using Windows Vista 64-bit or Windows 7 64-bit versions, you will need to first restart your system and press F8 right after the BIOS information goes away to get a boot menu.  Choose the option shown here:<br/>[http://img390.imageshack.us/img390/4326/ddsecc9.png]  <br/>You will need to choose that option with each boot for 64-bit systems, until we potentially get a kernel signing certificate.
+  * In the currently released binary, only Windows Vista 64-bit (and MAYBE Windows 7 64-bit) systems are supported.  In addition there may be an Intel/AMD issue.  I need to build a bunch more binaries tomorrow to support more OS variants.  This is not hard, but it takes a little bit of time.<br/>
+  * If you are using Windows Vista 64-bit or Windows 7 64-bit versions, you will need to first restart your system and press F8 right after the BIOS information goes away to get a boot menu.  Choose the option shown here:<br/>[http://img390.imageshack.us/img390/4326/ddsecc9.png]  <br/>You will need to choose that option with each boot for 64-bit systems, until we potentially get a kernel signing certificate.<br/>
+  * Once Windows boots, connect your wired XBox 360 Controller.<br/>
+  * Download the install package zip file (currently for Vista 64, here:  TODO).<br/>
+  * Extract the install package zip file to a directory.<br/>
+  * IMPORTANT NOTE:  Go read Troubleshooting below, in case the next step causes a blue screen or crash!  It really shouldn't, but be prepared!
+  * Right click chatpad_installer.exe and choose "Run as administrator" if you are using Vista or Windows 7.  Otherwise just right click it and choose "Open".<br/>
+  * A series of message boxes should appear describing the install process.  Some devices will get added in device manager, and you should see three red boxes asking you whether you want to install an unsigned driver.  You will need to allow this to happen to install the drivers in their current state.  *Note:  This step may take MINUTES.  Please give Windows time to install the drivers, parse INF files, and create restore points as appropriate.  Do not try to rerun the installer!  Check task manager if you are unsure if the installer is still running.*<br/>
+  * If none of the message boxes mention an error, go to "Using the Drivers" below.  If an error occurs, go to Troubleshooting.  If it fails, do not try to immediately run the installation again since it probably won't work the second time either!
+
+= Using the Drivers =
+
   * TODO
+
+= Troubleshooting =
+
+  * I haven't had problems with stability and I really hope you won't either.  However, if you do encounter a blue screen or crash, don't panic!  First, unplug the 360 controller.  Then, wait for the system to reboot (or reboot it manually if necessary).  Then, run chatpad_uninstaller.exe (right click, Run as Administrator if in Vista or Windows 7), wait for all message boxes to go away, and plug the controller back in.  Open device manager, and notice that the 360 controller should now be indicating an error.  Right click it, and use Update Driver Software to go back to the normal Microsoft controller.
+  * The uninstall process does not currently delete the virtual keyboard and mouse devices.  I need to add this code, but it's not in yet.  To manually remove the devices, right click the "HID Keyboard Device" or "HID-compliant mouse" in Device Manager and choose the Uninstall option.
