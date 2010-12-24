@@ -14,6 +14,7 @@ This software is provided with no guarantees.  See the [License] wiki page for l
   * This software currently only works with WIRED 360 controllers.  It may only currently work with the "Made for Windows" variant but that should change soon to support normal XBox 360 console controllers as well.<br/>
   * This software currently contains unsigned kernel drivers.  You must enable the use of unsigned drivers if you are using 64-bit Windows Vista or Windows 7.<br/>
   * This software is used at your own risk if you play games protected by the VAC (Valve anti-cheat) system.  This software does not mess with anything in Steam folders, does not replace DLLs, does not hook calls to DLLs, and does not communicate with games at all except by providing keyboard and mouse virtual HID devices to the operating system.  It is my belief that this should be safe, and the VAC FAQ ([https://support.steampowered.com/kb_article.php?ref=7849-Radz-6869]) mentions that system drivers should not trigger a VAC ban.  I am using the software myself as a gesture of good faith, and I play VAC-protected games.  Nevertheless, Valve provides no way to verify whether particular software is safe, so do not use the software if you are worried about this.  As long as the control utility is not running, the virtual keyboard and mouse devices should not even generate events.<br/>
+<br/>
 
 = Install Process =
 
