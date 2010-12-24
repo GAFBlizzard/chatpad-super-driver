@@ -24,14 +24,17 @@ This software is provided with no guarantees.  See the [License] wiki page for l
   * Once Windows boots, connect your wired XBox 360 Controller.<br/>
   * Download the install package zip file (currently for Vista 64, here:  TODO).<br/>
   * Extract the install package zip file to a directory.<br/>
-  * IMPORTANT NOTE:  Go read Troubleshooting below, in case the next step causes a blue screen or crash!  It really shouldn't, but be prepared!
+  * IMPORTANT NOTE:  Go read Troubleshooting below, in case the next step causes a blue screen or crash!  It really shouldn't, but be prepared!<br/>
   * Right click chatpad_installer.exe and choose "Run as administrator" if you are using Vista or Windows 7.  Otherwise just right click it and choose "Open".<br/>
   * A series of message boxes should appear describing the install process.  Some devices will get added in device manager, and you should see three red boxes asking you whether you want to install an unsigned driver.  You will need to allow this to happen to install the drivers in their current state.  *Note:  This step may take MINUTES.  Please give Windows time to install the drivers, parse INF files, and create restore points as appropriate.  Do not try to rerun the installer!  Check task manager if you are unsure if the installer is still running.*<br/>
-  * If none of the message boxes mention an error, go to "Using the Drivers" below.  If an error occurs, go to Troubleshooting.  If it fails, do not try to immediately run the installation again since it probably won't work the second time either!
+  * If none of the message boxes mention an error, go to "Using the Drivers" below.  If an error occurs, go to Troubleshooting.  If it fails, do not try to immediately run the installation again since it probably won't work the second time either!<br/>
 
 = Using the Drivers =
 
-  * TODO
+  * Right click chatpad_control.exe and choose "Run as administrator" if your operating system supports it, or "Open" otherwise.<br/>
+  * A command prompt window should open and stay visible.  If it closes instantly, you can try opening an adminstrator command prompt yourself (right click Start, Programs, Accessories, Command Prompt, Run as administrator) and run chatpad_control.exe again to see what output you get.  Only do this if you are comfortable with the command line and want to help me with debug output, though!
+  * If everything goes well, the command prompt window will print some stuff and stay visible.  If you were watching your 360 controller, you might have noticed the light blinking.  Try pressing some chatpad keys!  They should type stuff.  :)  You can try using mouse control by pressing the "people" button to toggle double thumbstick mouse control.
+  * If you got this far and everything is working, by some stroke of magic, then you are welcome to modify chatpad_config.txt (make a backup if you want, first) and change the bindings to suit your own taste.  See the comments in chatpad_config.txt, and the strings in README.TXT, for information about how to set up key bindings.  Note that my documentation is in an early state, so please forgive TODO comments and debug output for now.
 
 = Troubleshooting =
 
