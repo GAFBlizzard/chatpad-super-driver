@@ -1,13 +1,9 @@
 #summary Frequently Asked Questions
 
-= Introduction =
 
-Add your content here.
+= Questions =
 
+Email me at gtschemer@gmail.com, or post here if you have questions:
+http://www.mp3car.com/vbulletin/hardware-development/140189-contest-xbox-chatpad-driver-challenge.html
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+* Questions would go here...
