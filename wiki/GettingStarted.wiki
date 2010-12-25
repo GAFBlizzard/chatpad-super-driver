@@ -34,7 +34,7 @@ You will need to choose that option with each boot for 64-bit systems, until we 
    * Download the install package zip file that matches your OS:
       * *Windows XP:* [http://code.google.com/p/chatpad-super-driver/downloads/detail?name=chatpad_0_0_2a_winxp.zip&can=2&q=]
       * *Windows Vista:* [http://code.google.com/p/chatpad-super-driver/downloads/detail?name=chatpad_0_0_2a_winvista.zip&can=2&q=]
-      * *Windows 7 (currently not fully working):* [http://code.google.com/p/chatpad-super-driver/downloads/detail?name=chatpad_0_0_2a_win7.zip&can=2&q=]
+      * *Windows 7 (currently not working):* [http://code.google.com/p/chatpad-super-driver/downloads/detail?name=chatpad_0_0_2a_win7.zip&can=2&q=]
 
    * Extract the install package zip file to a directory.
 
