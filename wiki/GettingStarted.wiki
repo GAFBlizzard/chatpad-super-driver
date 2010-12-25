@@ -1,10 +1,10 @@
-#summary General guide to installing and using the super chatpad driver.
+#summary General guide to installing and using the chatpad super driver.
 #labels Featured
 
 
 = Introduction =
 
-This is a basic guide to installing and using the chatpad driver.  For now, this is an alpha release so the install and uninstall process are rough.  Do not try the driver right now unless you are comfortable testing alpha software.  :)
+This is a basic guide to installing and using the chatpad super driver.  For now, this is an alpha release so the install and uninstall process are rough.  Do not try the driver right now unless you are comfortable testing alpha software.  :)
 <br/>
 
 = Disclaimer =
