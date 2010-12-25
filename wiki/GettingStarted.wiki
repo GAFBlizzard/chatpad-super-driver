@@ -31,7 +31,7 @@ You will need to choose that option with each boot for 64-bit systems, until we 
 
    * Once Windows boots, connect your wired XBox 360 Controller.
 
-   * Download the install package zip file that matches your OS:<br/>
+   * Download the install package zip file that matches your OS:
       * *Windows XP:* [http://code.google.com/p/chatpad-super-driver/downloads/detail?name=chatpad_0_0_2a_winxp.zip&can=2&q=]
       * *Windows Vista:* [http://code.google.com/p/chatpad-super-driver/downloads/detail?name=chatpad_0_0_2a_winvista.zip&can=2&q=]
       * *Windows 7:* [http://code.google.com/p/chatpad-super-driver/downloads/detail?name=chatpad_0_0_2a_win7.zip&can=2&q=]
