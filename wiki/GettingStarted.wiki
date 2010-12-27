@@ -6,7 +6,7 @@
 
 This is a basic guide to installing and using the chatpad super driver.  For now, this is an alpha release so the install and uninstall process are rough.  Do not try the driver right now unless you are comfortable testing alpha software.  :)
 
-Does it not work on your system?  Post on the forum and wait for a mod to approve your post ([http://www.mp3car.com/vbulletin/hardware-development/140189-contest-xbox-chatpad-driver-challenge.html]), or email me!
+Does it not work on your system?  Post on the forum and wait for a mod to approve your post ([http://www.mp3car.com/vbulletin/hardware-development/140189-contest-xbox-chatpad-driver-challenge.html]), or email me (gtschemer at gmail dot com)!
 
 Does it WORK on your system?  Please email me and tell me which OS, and whether it's 32-bit or 64-bit, and whether you have a "Made for Windows" controller or not!  I'm trying to get a feel for whether it is working for most people, only a few, and so on.
 <br/>
