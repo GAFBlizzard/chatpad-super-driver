@@ -5,6 +5,10 @@
 = Introduction =
 
 This is a basic guide to installing and using the chatpad super driver.  For now, this is an alpha release so the install and uninstall process are rough.  Do not try the driver right now unless you are comfortable testing alpha software.  :)
+
+Does it not work on your system?  Post on the forum and wait for a mod to approve your post ([http://www.mp3car.com/vbulletin/hardware-development/140189-contest-xbox-chatpad-driver-challenge.html]), or email me!
+
+Does it WORK on your system?  Please email me and tell me which OS, and whether it's 32-bit or 64-bit, and whether you have a "Made for Windows" controller or not!  I'm trying to get a feel for whether it is working for most people, only a few, and so on.
 <br/>
 
 = Disclaimer =
@@ -13,7 +17,7 @@ This software is provided with no guarantees.  See the [License] wiki page for l
 
    * This software is open-source, but I have not yet finished uploading everything to this project page.  If you are uncomfortable installing software without source, please wait until I upload the files.
 
-   * This software currently only works with WIRED 360 controllers.  It may only currently work with the "Made for Windows" variant but that should change soon to support normal XBox 360 console controllers as well.
+   * This software currently only works with *WIRED* 360 controllers.  It may only currently work with the "Made for Windows" variant but that should change soon to support normal XBox 360 console controllers as well.
 
    * This software currently contains unsigned kernel drivers.  You must enable the use of unsigned drivers if you are using 64-bit Windows Vista or Windows 7.
 
