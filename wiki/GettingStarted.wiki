@@ -28,6 +28,8 @@ This software is provided with no guarantees.  See the [License] wiki page for l
 
 * WARNING!!!  THIS IS ALPHA SOFTWARE!  IF YOU ARE UNCOMFORTABLE WITH MESSING WITH DEVICE MANAGER OR DRIVERS, WAIT FOR A LATER RELEASE! *<br/>
 
+   * If you have used Driver Verifier on your system before, you will need to disable it until some things are fixed with the driver.  You can disable it by doing Start->Run, running "verifier.exe", selecting "Delete existing settings", and restarting your computer after clicking the Finish button and closing any other dialog/message boxes that appear.  If you don't know what Driver Verifier is, you probably do not need to worry about disabling it.
+
    * If you are using Windows Vista 64-bit or Windows 7 64-bit versions, you will need to first restart your system and press F8 right after the BIOS information goes away to get a boot menu.  Choose the option shown here:
 [http://img390.imageshack.us/img390/4326/ddsecc9.png]
 
