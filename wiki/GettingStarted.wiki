@@ -1,5 +1,5 @@
-#summary General guide to installing and using the chatpad super driver.
 #labels Featured
+;#summary General guide to installing and using the chatpad super driver.
 
 
 = Introduction =
@@ -65,7 +65,7 @@ You will need to choose that option with each boot for 64-bit systems, until we 
 
    * Bring the control utito the foreground and press Control-C on the normal Windows keyboard to kill it, when you are finished with the chatpad.
 
-   * If you got this far and everything is working, then you are welcome to modify chatpad_config.txt (make a backup if you want, first) and change the bindings to suit your own taste.  See the comments in chatpad_config.txt, and the strings in README.TXT, for information about how to set up key bindings.  Note that my documentation is in an early state, so please forgive TODO comments and debug output for now.  *Special note for key configuration:*  If you use an international key mapping, such as the German one, you will need to try to use mappings that match from a US keyboard to a German keyboard.  There is a German keyboard config file in the downloads section of this website right now.  Also note that you can use the KEYBOARD_KEY_RIGHT_ALT modifier, or the SPECIAL_ACTION_RIGHT_ALT binding, if you want to use the AltGr key.
+   * If you got this far and everything is working, then you are welcome to modify chatpad_config.txt (make a backup if you want, first) and change the bindings to suit your own taste.  See the comments in chatpad_config.txt, and the strings in README.TXT, for information about how to set up key bindings.  Note that my documentation is in an early state, so please forgive TODO comments and debug output for now.  *Special note for key configuration:*  If you use an international key mapping, such as the German one, you will need to try to use mappings that match from a US keyboard to a German keyboard.  There is a German keyboard config file in the downloads section of this website right now.  Also note that you can use the KEYBOARD_KEY_RIGHT_ALT modifier, or the SPECIAL_ACTION_RIGHT_ALT binding, if you want to use the !AltGr key.
 
    * If you want to copy the control utility to another directory, the only files that should be required are the control utility that matches your system (such as chatpad_control_amd64.exe) and the configuration file, chatpad_config.txt.
 
