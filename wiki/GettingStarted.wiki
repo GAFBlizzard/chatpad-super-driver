@@ -1,5 +1,5 @@
+#summary General guide to installing and using the chatpad super driver.
 #labels Featured
-;#summary General guide to installing and using the chatpad super driver.
 
 
 = Introduction =
@@ -85,3 +85,5 @@ You will need to choose that option with each boot for 64-bit systems, until we 
    Once all of the above devices are removed, right click the "XBox 360 Controller HID Keyboard for Chatpad" and "XBox 360 Controller HID Mouse for Chatpad" entries under the *Human Interface Devices* category and choose Uninstall on them as well, clicking the "Delete the driver software for this device" options.
 
    * If you get a "This program failed to install correctly" error for the installer or the uninstaller, just click the button to indicate that it worked, instead of trying to reinstall.
+
+   * If your question is not answered above, check the Issues section (http://code.google.com/p/chatpad-super-driver/issues/list) and see if it is a problem that is already known.  Feel free to email me (gtschemer at gmail dot com) and let me know you are having the problem too, so I can get additional information or increase the priority of certain fixes.
