@@ -1,0 +1,403 @@
+# ***********************************************************************
+# This file configures GAFBlizzard's Chatpad Super Driver.
+#
+# Carefully read the file format information below before making changes.
+# ***********************************************************************
+
+# File Format
+# ===========
+# Each line of the file can be empty, have a comment (starts with #),
+# or have a configuration line.  Configuration lines can be in any order,
+# but there should not be multiple lines for the same mapping or setting.
+# If there are multiple such lines, then the final one will take effect.
+#
+# In other words, if you map a key to F3, and then later in the file map the
+# same key to F9, then the key will end up acting like F9.
+
+
+# ****************
+# General Settings
+# ****************
+
+# This setting can be TRUE or FALSE.  It controls whether "Windows Mode" can be
+# activated.  In Windows Mode, the 360 controller no longer functions as a
+# gamepad.  Instead, thumbsticks and buttons can be used to control the mouse
+# and potentially perform other actions under Windows, such as raising or
+# lowering audio volume.
+#
+# TODO NEXT make sure that this check is performed (after the file is loaded, on the fly)
+# If ENABLE_WINDOWS_MODE is set to FALSE (it is TRUE by default), then 360
+# controller buttons can only be mapped to other controller buttons, not
+# mouse actions or key binds.  Attempting to map them to these actions will
+# fail.
+#
+# TODO NEXT make sure that this check is performed (after the file is loaded, on the fly)
+# Note that when Windows Mode is active, 360 controller buttons will not
+# function as normal gamepad buttons, and attempting to map them in this
+# fashion by use of the CONTROLLER_MODIFIER_WINDOWS_MODE modifier will
+# fail.
+ENABLE_WINDOWS_MODE = TRUE
+
+# This setting can be TRUE or FALSE.  It controls whether the chatpad key
+# light on the "people" button will be used to indicate when "Windows Mode"
+# is active.  If ENABLE_WINDOWS_MODE_PEOPLE_KEY_INDICATOR is TRUE (it is
+# FALSE by default), then there will be no visual indicator that Windows Mode is
+# active.  Note that having this setting set to true may cause confusing
+# results if a key is mapped to the people mode latch, since that latch also
+# uses the people key light indicator.
+ENABLE_WINDOWS_MODE_PEOPLE_KEY_INDICATOR = TRUE
+
+# This setting can be TRUE or FALSE.  It controls whether the caps lock state
+# controls the shift key indicator light on the chatpad.  If it is TRUE
+# (it is FALSE by default), then SPECIAL_ACTION_LEFT_SHIFT_LATCH will
+# not control the shift indicator light.
+CAPS_LOCK_CONTROLS_SHIFT_INDICATOR = FALSE
+
+# This setting can be TRUE or FALSE.  If it is TRUE, then 360 controller buttons
+# may be bound to other 360 controller buttons by use of this config file.  This
+# would allow you to swap the function of the A and B buttons on the controller
+# in case the game did not provide for configurable controls, for instance.
+#
+# If this setting is FALSE (it is TRUE by default), then 360 controller
+# buttons will always have their original function when Windows Mode
+# is not active.
+# TODO NEXT test and make sure this boolean works (loading the variable from the config file now works)
+ENABLE_INGAME_REMAPPED_BUTTONS = TRUE
+
+# This setting can range from a minimum of 1 to a maximum of 20.  The higher it is, the faster the
+# mouse will move when you move the thumbsticks in Windows Mode.
+THUMBSTICK_MOUSE_SENSITIVITY = 10
+
+# ***************************
+# Chatpad/Controller Mappings
+# ***************************
+
+# Mapping Configuration Line Format
+# =================================
+# Each mapping line consists of the following items separated by '=' characters:
+#   * A string identifying a chatpad key or controller button, optionally combined with
+#       one or more modifiers by use of the '+' character.  No modifier strings are allowed
+#       before the string that identifies the key or button.
+#
+# TODO verify below examples
+#       Examples:
+#         Invalid:  CHATPAD_GREEN + CHATPAD_KEY_1
+#         Correct:  CHATPAD_KEY_Q
+#         Correct:  CHATPAD_KEY_1 + CHATPAD_GREEN
+#         Correct:  CHATPAD_KEY_2 + CHATPAD_SHIFT + CHATPAD_ORANGE
+#
+#   * A string identifying the action to take when the key or button is pressed and
+#       the specified modifiers (if any) are active.  Note that controller buttons
+#       can be remapped to other controller buttons, but chatpad keys cannot be
+#       remapped to controller buttons.
+#
+# TODO verify below examples
+#       Examples:
+#         NOTHING                                  (key is disabled, this is the default if not specified in this config file)
+#         KEYBOARD_KEY_A                           (simulated 'A' keypress on keyboard, which may be modified by shift etc.)
+#         KEYBOARD_KEY_TAB + KEYBOARD_LEFT_SHIFT   (simulated keyboard shift-tab)
+#         MOUSE_CLICK_LEFT                         (simulated left mouse button click)
+#         SPECIAL_ACTION_ORANGE                    (while the key is held down, the orange modifier will be in effect)
+#         SPECIAL_ACTION_ORANGE_LATCH              (the orange modifier will stay in effect until SPECIAL_ACTION_ORANGE_LATCH
+#                                                   is triggered again, or another key is pressed)
+#       TODO add controller example
+#
+# Complete line examples:
+#       (the following line maps chatpad Q to a simulated Q keypress, which may type 'q' or 'Q'
+#        depending on whether caps lock or shift are active)
+# TODO verify below examples
+#              CHATPAD_KEY_Q = KEYBOARD_KEY_Q
+#
+#       (the following line maps the chatpad 1 key to a simulated F1 keypress, if the orange modifier is active)
+#              CHATPAD_KEY_1 + CHATPAD_ORANGE = KEYBOARD_KEY_F1
+#
+#       (the following line maps the chatpad 1 key to a simulated Ctrl-C key combination, if the orange modifier is active)
+#              CHATPAD_KEY_2 + CHATPAD_ORANGE = KEYBOARD_KEY_C + KEYBOARD_LEFT_CONTROL
+#
+#       TODO add controller example for button remapping
+#       TODO add controller example for mouse button usage
+#       TODO add controller example for key usage
+#
+# NOTE:  For lists of strings that can be used for configuration lines, see the README.TXT file.
+
+#
+# Chatpad key mappings.
+#
+
+CHATPAD_KEY_1 = KEYBOARD_KEY_1
+CHATPAD_KEY_2 = KEYBOARD_KEY_2
+CHATPAD_KEY_3 = KEYBOARD_KEY_3
+CHATPAD_KEY_4 = KEYBOARD_KEY_4
+CHATPAD_KEY_5 = KEYBOARD_KEY_5
+CHATPAD_KEY_6 = KEYBOARD_KEY_6
+CHATPAD_KEY_7 = KEYBOARD_KEY_7
+CHATPAD_KEY_8 = KEYBOARD_KEY_8
+CHATPAD_KEY_9 = KEYBOARD_KEY_9
+CHATPAD_KEY_0 = KEYBOARD_KEY_0
+
+CHATPAD_KEY_Q = KEYBOARD_KEY_Q
+CHATPAD_KEY_W = KEYBOARD_KEY_W
+CHATPAD_KEY_E = KEYBOARD_KEY_E
+CHATPAD_KEY_R = KEYBOARD_KEY_R
+CHATPAD_KEY_T = KEYBOARD_KEY_T
+CHATPAD_KEY_Y = KEYBOARD_KEY_Y
+CHATPAD_KEY_U = KEYBOARD_KEY_U
+CHATPAD_KEY_I = KEYBOARD_KEY_I
+CHATPAD_KEY_O = KEYBOARD_KEY_O
+CHATPAD_KEY_P = KEYBOARD_KEY_P
+
+CHATPAD_KEY_A = KEYBOARD_KEY_A
+CHATPAD_KEY_S = KEYBOARD_KEY_S
+CHATPAD_KEY_D = KEYBOARD_KEY_D
+CHATPAD_KEY_F = KEYBOARD_KEY_F
+CHATPAD_KEY_G = KEYBOARD_KEY_G
+CHATPAD_KEY_H = KEYBOARD_KEY_H
+CHATPAD_KEY_J = KEYBOARD_KEY_J
+CHATPAD_KEY_K = KEYBOARD_KEY_K
+CHATPAD_KEY_L = KEYBOARD_KEY_L
+CHATPAD_KEY_COMMA = KEYBOARD_KEY_COMMA
+
+CHATPAD_KEY_Z = KEYBOARD_KEY_Z
+CHATPAD_KEY_X = KEYBOARD_KEY_X
+CHATPAD_KEY_C = KEYBOARD_KEY_C
+CHATPAD_KEY_V = KEYBOARD_KEY_V
+CHATPAD_KEY_B = KEYBOARD_KEY_B
+CHATPAD_KEY_N = KEYBOARD_KEY_N
+CHATPAD_KEY_M = KEYBOARD_KEY_M
+CHATPAD_KEY_PERIOD = KEYBOARD_KEY_PERIOD
+CHATPAD_KEY_ENTER = KEYBOARD_KEY_ENTER
+
+CHATPAD_KEY_LEFT = KEYBOARD_KEY_LEFT
+CHATPAD_KEY_SPACEBAR = KEYBOARD_KEY_SPACEBAR
+CHATPAD_KEY_RIGHT = KEYBOARD_KEY_RIGHT
+CHATPAD_KEY_BACKSPACE = KEYBOARD_KEY_BACKSPACE
+
+
+#
+# You might want to customize the bindings for the numerical keys to activate keys like F1-F10.
+#
+
+CHATPAD_KEY_1 + CHATPAD_SHIFT = KEYBOARD_KEY_F1
+CHATPAD_KEY_2 + CHATPAD_SHIFT = KEYBOARD_KEY_F2
+CHATPAD_KEY_3 + CHATPAD_SHIFT = KEYBOARD_KEY_F3
+CHATPAD_KEY_4 + CHATPAD_SHIFT = KEYBOARD_KEY_F4
+CHATPAD_KEY_5 + CHATPAD_SHIFT = KEYBOARD_KEY_F5
+CHATPAD_KEY_6 + CHATPAD_SHIFT = KEYBOARD_KEY_F6
+CHATPAD_KEY_7 + CHATPAD_SHIFT = KEYBOARD_KEY_F7
+CHATPAD_KEY_8 + CHATPAD_SHIFT = KEYBOARD_KEY_F8
+CHATPAD_KEY_9 + CHATPAD_SHIFT = KEYBOARD_KEY_F9
+CHATPAD_KEY_0 + CHATPAD_SHIFT = KEYBOARD_KEY_F10
+
+
+#
+# These keys are given bindings that includes shift to make shift work properly,
+# since the shift chatpad binding will be active after (left) shift is
+# triggered.  The right side needs a shift modifier as well, since if it were
+# automatic, trying to bind shift + some key to F1 would probably result in
+# Windows seeing shift-F1 instead.
+#
+
+CHATPAD_KEY_Q + CHATPAD_SHIFT = KEYBOARD_KEY_Q + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_W + CHATPAD_SHIFT = KEYBOARD_KEY_W + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_E + CHATPAD_SHIFT = KEYBOARD_KEY_E + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_R + CHATPAD_SHIFT = KEYBOARD_KEY_R + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_T + CHATPAD_SHIFT = KEYBOARD_KEY_T + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_Y + CHATPAD_SHIFT = KEYBOARD_KEY_Y + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_U + CHATPAD_SHIFT = KEYBOARD_KEY_U + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_I + CHATPAD_SHIFT = KEYBOARD_KEY_I + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_O + CHATPAD_SHIFT = KEYBOARD_KEY_O + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_P + CHATPAD_SHIFT = KEYBOARD_KEY_P + KEYBOARD_LEFT_SHIFT
+
+CHATPAD_KEY_A + CHATPAD_SHIFT = KEYBOARD_KEY_A + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_S + CHATPAD_SHIFT = KEYBOARD_KEY_S + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_D + CHATPAD_SHIFT = KEYBOARD_KEY_D + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_F + CHATPAD_SHIFT = KEYBOARD_KEY_F + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_G + CHATPAD_SHIFT = KEYBOARD_KEY_G + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_H + CHATPAD_SHIFT = KEYBOARD_KEY_H + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_J + CHATPAD_SHIFT = KEYBOARD_KEY_J + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_K + CHATPAD_SHIFT = KEYBOARD_KEY_K + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_L + CHATPAD_SHIFT = KEYBOARD_KEY_L + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_COMMA + CHATPAD_SHIFT = KEYBOARD_KEY_COMMA + KEYBOARD_LEFT_SHIFT
+
+CHATPAD_KEY_Z + CHATPAD_SHIFT = KEYBOARD_KEY_Z + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_X + CHATPAD_SHIFT = KEYBOARD_KEY_X + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_C + CHATPAD_SHIFT = KEYBOARD_KEY_C + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_V + CHATPAD_SHIFT = KEYBOARD_KEY_V + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_B + CHATPAD_SHIFT = KEYBOARD_KEY_B + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_N + CHATPAD_SHIFT = KEYBOARD_KEY_N + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_M + CHATPAD_SHIFT = KEYBOARD_KEY_M + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_PERIOD + CHATPAD_SHIFT = KEYBOARD_KEY_PERIOD + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_ENTER + CHATPAD_SHIFT = KEYBOARD_KEY_ENTER + KEYBOARD_LEFT_SHIFT
+
+CHATPAD_KEY_LEFT + CHATPAD_SHIFT = KEYBOARD_KEY_LEFT + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_SPACEBAR + CHATPAD_SHIFT = KEYBOARD_KEY_SPACEBAR + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_RIGHT + CHATPAD_SHIFT = KEYBOARD_KEY_RIGHT + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_BACKSPACE + CHATPAD_SHIFT = KEYBOARD_KEY_BACKSPACE + KEYBOARD_LEFT_SHIFT
+
+#German Umlaute
+CHATPAD_KEY_A + CHATPAD_SHIFT + CHATPAD_ORANGE = KEYBOARD_KEY_APOSTROPHE + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_O + CHATPAD_SHIFT + CHATPAD_ORANGE = KEYBOARD_KEY_SEMICOLON + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_U + CHATPAD_SHIFT + CHATPAD_ORANGE = KEYBOARD_KEY_OPEN_BRACKET + KEYBOARD_LEFT_SHIFT
+
+#
+# These bindings enable symbols shown in green on the chatpad.
+# Lines without a mapping correspond to special symbols that are currently unsupported.
+#
+
+CHATPAD_KEY_Q + CHATPAD_GREEN = KEYBOARD_KEY_1 + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_W + CHATPAD_GREEN = KEYBOARD_KEY_2 + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_E + CHATPAD_GREEN = KEYBOARD_KEY_E + KEYBOARD_RIGHT_ALT
+CHATPAD_KEY_R + CHATPAD_GREEN = KEYBOARD_KEY_4 + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_T + CHATPAD_GREEN = KEYBOARD_KEY_5 + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_Y + CHATPAD_GREEN = KEYBOARD_KEY_6 + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_U + CHATPAD_GREEN = KEYBOARD_KEY_7 + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_I + CHATPAD_GREEN = KEYBOARD_KEY_8 + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_O + CHATPAD_GREEN = KEYBOARD_KEY_9 + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_P + CHATPAD_GREEN = KEYBOARD_KEY_0 + KEYBOARD_LEFT_SHIFT
+
+CHATPAD_KEY_A + CHATPAD_GREEN = KEYBOARD_KEY_GRAVE_ACCENT + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_S + CHATPAD_GREEN = KEYBOARD_KEY_MINUS
+CHATPAD_KEY_D + CHATPAD_GREEN = KEYBOARD_KEY_OPEN_BRACKET + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_F + CHATPAD_GREEN = KEYBOARD_KEY_CLOSE_BRACKET + KEYBOARD_LEFT_SHIFT
+#CHATPAD_KEY_G + CHATPAD_GREEN = 
+CHATPAD_KEY_H + CHATPAD_GREEN = KEYBOARD_KEY_7 + KEYBOARD_RIGHT_ALT
+CHATPAD_KEY_J + CHATPAD_GREEN = KEYBOARD_KEY_0 + KEYBOARD_RIGHT_ALT
+CHATPAD_KEY_K + CHATPAD_GREEN = KEYBOARD_KEY_8 + KEYBOARD_RIGHT_ALT
+CHATPAD_KEY_L + CHATPAD_GREEN = KEYBOARD_KEY_9 + KEYBOARD_RIGHT_ALT
+
+CHATPAD_KEY_COMMA + CHATPAD_GREEN = KEYBOARD_KEY_BACKSLASH + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_Z + CHATPAD_GREEN = KEYBOARD_KEY_GRAVE_ACCENT
+#CHATPAD_KEY_X + CHATPAD_GREEN = 
+#CHATPAD_KEY_C + CHATPAD_GREEN = 
+CHATPAD_KEY_V + CHATPAD_GREEN = KEYBOARD_KEY_FORWARDSLASH
+CHATPAD_KEY_B + CHATPAD_GREEN = KEYBOARD_KEY_KEYPAD_ASTERISK
+CHATPAD_KEY_N + CHATPAD_GREEN = KEYBOARD_KEY_COMMA + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_M + CHATPAD_GREEN = KEYBOARD_KEY_PERIOD + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_PERIOD + CHATPAD_GREEN = KEYBOARD_KEY_MINUS + KEYBOARD_LEFT_SHIFT
+
+#####Winows shortcuts#####
+
+#find, select all, cut, copy, paste
+CHATPAD_KEY_F + CHATPAD_GREEN + CHATPAD_ORANGE = KEYBOARD_KEY_F + KEYBOARD_LEFT_CONTROL
+CHATPAD_KEY_A + CHATPAD_GREEN + CHATPAD_ORANGE = KEYBOARD_KEY_A + KEYBOARD_LEFT_CONTROL
+CHATPAD_KEY_X + CHATPAD_GREEN + CHATPAD_ORANGE = KEYBOARD_KEY_X + KEYBOARD_LEFT_CONTROL
+CHATPAD_KEY_C + CHATPAD_GREEN + CHATPAD_ORANGE = KEYBOARD_KEY_C + KEYBOARD_LEFT_CONTROL
+CHATPAD_KEY_V + CHATPAD_GREEN + CHATPAD_ORANGE = KEYBOARD_KEY_V + KEYBOARD_LEFT_CONTROL
+
+#undo, redo
+CHATPAD_KEY_Z + CHATPAD_GREEN + CHATPAD_ORANGE = KEYBOARD_KEY_Z + KEYBOARD_LEFT_CONTROL
+CHATPAD_KEY_Y + CHATPAD_GREEN + CHATPAD_ORANGE = KEYBOARD_KEY_Y + KEYBOARD_LEFT_CONTROL
+
+#winows start menu
+CHATPAD_KEY_W + CHATPAD_GREEN + CHATPAD_ORANGE = SPECIAL_ACTION_LEFT_GUI
+
+#kill foreground winow/app
+CHATPAD_KEY_4 + CHATPAD_GREEN + CHATPAD_ORANGE = KEYBOARD_KEY_F4  + KEYBOARD_LEFT_ALT
+
+# alt + enter (toggle fullscreen for some apps)
+CHATPAD_KEY_ENTER + CHATPAD_GREEN + CHATPAD_ORANGE = KEYBOARD_KEY_ENTER  + KEYBOARD_LEFT_ALT
+
+#show desktop
+CHATPAD_KEY_D + CHATPAD_GREEN + CHATPAD_ORANGE = KEYBOARD_KEY_D + KEYBOARD_LEFT_GUI
+
+#show computer
+CHATPAD_KEY_E + CHATPAD_GREEN + CHATPAD_ORANGE = KEYBOARD_KEY_E + KEYBOARD_LEFT_GUI
+
+#open aero flip 3 task selector (vista and 7 only)
+CHATPAD_KEY_SPACEBAR + CHATPAD_GREEN + CHATPAD_ORANGE = KEYBOARD_KEY_TAB + KEYBOARD_LEFT_GUI + KEYBOARD_RIGHT_CONTROL
+
+
+#
+# These bindings enable symbols shown in orange on the chatpad.
+# Lines without a mapping correspond to special symbols that are currently unsupported.
+#
+
+CHATPAD_KEY_Q + CHATPAD_ORANGE = KEYBOARD_KEY_Q + KEYBOARD_RIGHT_ALT
+#CHATPAD_KEY_W + CHATPAD_ORANGE = 
+# Note that escape is not the normal binding here, but the accented e character is currently unsupported,
+# so I figured I would map this to escape for my own convenience.  -- GAFBlizzard
+CHATPAD_KEY_E + CHATPAD_ORANGE = KEYBOARD_KEY_ESCAPE
+CHATPAD_KEY_R + CHATPAD_ORANGE = KEYBOARD_KEY_3 + KEYBOARD_LEFT_SHIFT
+#CHATPAD_KEY_T + CHATPAD_ORANGE = 
+CHATPAD_KEY_Z + CHATPAD_ORANGE = KEYBOARD_KEY_GRAVE_ACCENT + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_U + CHATPAD_ORANGE = KEYBOARD_KEY_OPEN_BRACKET
+#CHATPAD_KEY_I + CHATPAD_ORANGE = 
+CHATPAD_KEY_O + CHATPAD_ORANGE = KEYBOARD_KEY_SEMICOLON
+CHATPAD_KEY_P + CHATPAD_ORANGE = KEYBOARD_KEY_MINUS + KEYBOARD_RIGHT_ALT
+
+CHATPAD_KEY_A + CHATPAD_ORANGE = KEYBOARD_KEY_APOSTROPHE
+#CHATPAD_KEY_S + CHATPAD_ORANGE = 
+#CHATPAD_KEY_D + CHATPAD_ORANGE = 
+#CHATPAD_KEY_F + CHATPAD_ORANGE = 
+#CHATPAD_KEY_G + CHATPAD_ORANGE = 
+CHATPAD_KEY_H + CHATPAD_ORANGE = KEYBOARD_KEY_EQUALS + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_J + CHATPAD_ORANGE = KEYBOARD_KEY_APOSTROPHE + KEYBOARD_LEFT_SHIFT
+#CHATPAD_KEY_K + CHATPAD_ORANGE = 
+#CHATPAD_KEY_L + CHATPAD_ORANGE = 
+CHATPAD_KEY_COMMA + CHATPAD_ORANGE = KEYBOARD_KEY_BACKSLASH
+
+CHATPAD_KEY_SHIFT + CHATPAD_ORANGE = KEYBOARD_KEY_CAPS_LOCK
+CHATPAD_KEY_Y + CHATPAD_ORANGE = KEYBOARD_KEY_GRAVE_ACCENT
+#CHATPAD_KEY_X + CHATPAD_ORANGE = 
+#CHATPAD_KEY_C + CHATPAD_ORANGE = 
+CHATPAD_KEY_V + CHATPAD_ORANGE = KEYBOARD_KEY_FORWARDSLASH + KEYBOARD_LEFT_SHIFT
+CHATPAD_KEY_B + CHATPAD_ORANGE = KEYBOARD_KEY_CLOSE_BRACKET
+#CHATPAD_KEY_N + CHATPAD_ORANGE = 
+#CHATPAD_KEY_M + CHATPAD_ORANGE = 
+#CHATPAD_KEY_PERIOD + CHATPAD_ORANGE = 
+
+
+#
+# Note that there must be a pair of mappings for the chatpad latch toggles to work properly,
+# since the modifier will be active the second time the button is pressed.  Having them in
+# this pair format allows the toggle button to be pressed twice to turn the modifier on
+# and then off instead of requiring a different key to be pressed.
+#
+#CHATPAD_KEY_SHIFT = SPECIAL_ACTION_LEFT_SHIFT
+CHATPAD_KEY_SHIFT = SPECIAL_ACTION_LEFT_SHIFT_LATCH
+CHATPAD_KEY_SHIFT + CHATPAD_SHIFT = SPECIAL_ACTION_LEFT_SHIFT_LATCH
+CHATPAD_KEY_GREEN = SPECIAL_ACTION_GREEN_LATCH
+CHATPAD_KEY_GREEN + CHATPAD_GREEN = SPECIAL_ACTION_GREEN_LATCH
+CHATPAD_KEY_ORANGE = SPECIAL_ACTION_ORANGE_LATCH
+CHATPAD_KEY_ORANGE + CHATPAD_ORANGE = SPECIAL_ACTION_ORANGE_LATCH
+
+#
+# The following two binds will let the people button act as a latching modifier with a light.
+# NOTE:  Only one set of the below binds can be active at a time.
+#
+### CHATPAD_KEY_PEOPLE = SPECIAL_ACTION_PEOPLE_LATCH
+### CHATPAD_KEY_PEOPLE + CHATPAD_PEOPLE = SPECIAL_ACTION_PEOPLE_LATCH
+
+#
+# The following bind will let the people button act to toggle Windows Mode,
+# where the thumbsticks can control the mouse cursor.
+#
+CHATPAD_KEY_PEOPLE = SPECIAL_ACTION_TOGGLE_WINDOWS_MODE
+
+#
+# The following bind will let the people button act as the left Windows key on a keyboard.
+#
+### CHATPAD_KEY_PEOPLE = SPECIAL_ACTION_LEFT_GUI
+
+#
+# Controller button mappings.
+#
+# The left side of controller mappings is the trigger action, and the right side is the output action.
+#
+
+#CONTROLLER_BUTTON_A = CONTROLLER_BUTTON_B
+#CONTROLLER_BUTTON_B = CONTROLLER_BUTTON_A
+#CONTROLLER_BUTTON_X + CONTROLLER_WINDOWS_MODE = 
+CONTROLLER_BUTTON_Y + CONTROLLER_WINDOWS_MODE = MOUSE_CLICK_MIDDLE
+CONTROLLER_BUTTON_A + CONTROLLER_WINDOWS_MODE = MOUSE_CLICK_LEFT
+CONTROLLER_BUTTON_B + CONTROLLER_WINDOWS_MODE = MOUSE_CLICK_RIGHT
+CONTROLLER_BUTTON_LB + CONTROLLER_WINDOWS_MODE = MOUSE_WHEEL_UP
+CONTROLLER_BUTTON_RB + CONTROLLER_WINDOWS_MODE = MOUSE_WHEEL_DOWN
+
+# commented out next line. caused wired things happening if a game uses gfwl and steam overlay.
+#CONTROLLER_BUTTON_GUIDE = KEYBOARD_KEY_TAB + KEYBOARD_LEFT_SHIFT
+CONTROLLER_BUTTON_GUIDE + CONTROLLER_WINDOWS_MODE = KEYBOARD_KEY_TAB + KEYBOARD_LEFT_SHIFT
+
+# TODO remove testing binds after trying them
+#CONTROLLER_BUTTON_GUIDE = KEYBOARD_KEY_ESCAPE
+
